@@ -1,0 +1,39 @@
+# walking and doors on floor 1 (episode 1): the start corridor's door (button 2) opens and the player walks
+# through it into the room with the ambush guards; the west door of that room too
+symbols build_dbg/game.noi
+run 400
+poke dbg_god 1 w1          # the room has two ambush guards: health is not what this test is about
+# north: from the start tile up to the door at (24,57)
+hold up
+run 200
+hold none
+run 40
+expect dbg_ty == 58 w1
+# button 2 opens it, then walk north through the doorway
+hold 2
+run 40
+hold none
+run 60
+hold up
+run 300
+hold none
+run 40
+expect dbg_tx == 24 w1
+expect dbg_ty <= 52 w1
+# a second door, with open floor on both sides and nothing else around: the door at (36,22)
+poke dbg_wx 36 w1
+poke dbg_wy 23 w1
+poke dbg_wdir 0 w1
+poke dbg_warp 1 w1
+run 60
+hold 2
+run 60
+hold none
+run 100
+hold up
+run 200
+hold none
+run 40
+expect dbg_tx == 36 w1
+expect dbg_ty <= 21 w1
+screenshot /tmp/s/t_walk.ppm

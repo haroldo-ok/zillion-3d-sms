@@ -1,0 +1,17 @@
+# walking over a pickup: the machine gun at the start corridor of floor 1 (episode 1) gives ammo and the weapon
+symbols build_dbg/game.noi
+run 300
+poke dbg_wx 23 w1
+poke dbg_wy 61 w1
+poke dbg_wdir 0 w1
+poke dbg_warp 1 w1
+run 30
+expect dbg_ammo == 8 w2
+hold up
+run 150
+hold none
+run 40
+expect dbg_ammo >= 14 w2
+expect dbg_ty == 59 w1
+expectpace 0
+screenshot /tmp/s/t_pickup.ppm

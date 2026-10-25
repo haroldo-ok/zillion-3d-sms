@@ -1,0 +1,35 @@
+# the ambush guards of floor 1 (episode 1): from (23,51) facing west the pistol reaches the guard at (19,51),
+# he dies and his 100 points are added.  A press per game frame (the pistol's animation spans several frames).
+symbols build_dbg/game.noi
+run 300
+poke dbg_god 1 w1
+poke dbg_wx 23 w1
+poke dbg_wy 51 w1
+poke dbg_wdir 3 w1
+poke dbg_warp 1 w1
+run 100
+hold 1
+run 30
+hold none
+run 60
+hold 1
+run 30
+hold none
+run 60
+hold 1
+run 30
+hold none
+run 60
+hold 1
+run 30
+hold none
+run 60
+hold 1
+run 30
+hold none
+run 60
+run 120
+expect dbg_kills >= 1 w2
+expect dbg_score >= 100 w2
+expectpace 0
+screenshot /tmp/s/t_fight.ppm

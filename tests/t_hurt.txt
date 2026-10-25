@@ -1,0 +1,10 @@
+# enemies hurt: the ambush guard of floor 1 shoots the player, his health goes down and the red flash comes
+symbols build_dbg/game.noi
+run 300
+poke dbg_wx 23 w1
+poke dbg_wy 51 w1
+poke dbg_wdir 3 w1
+poke dbg_warp 1 w1
+run 400
+expect dbg_hp < 100 w2
+screenshot /tmp/s/t_hurt.ppm

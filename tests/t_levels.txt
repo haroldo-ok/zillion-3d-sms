@@ -1,0 +1,178 @@
+# every level of both episodes (Zillion 3D: 2 x 10 floors) loads and puts the player on its start tile
+symbols build_dbg/game.noi
+run 200
+# floor 1 of episode 1 is the level the game starts in
+expect dbg_tx == 24 w1
+expect dbg_ty == 62 w1
+screenshot /tmp/s/lv01.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 2 w1
+run 300
+expect dbg_tx == 26 w1
+expect dbg_ty == 55 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 2 w1
+screenshot /tmp/s/lv02.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 3 w1
+run 300
+expect dbg_tx == 7 w1
+expect dbg_ty == 61 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 3 w1
+screenshot /tmp/s/lv03.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 4 w1
+run 300
+expect dbg_tx == 53 w1
+expect dbg_ty == 60 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 4 w1
+screenshot /tmp/s/lv04.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 5 w1
+run 300
+expect dbg_tx == 28 w1
+expect dbg_ty == 57 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 5 w1
+screenshot /tmp/s/lv05.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 6 w1
+run 300
+expect dbg_tx == 4 w1
+expect dbg_ty == 54 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 6 w1
+screenshot /tmp/s/lv06.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 7 w1
+run 300
+expect dbg_tx == 3 w1
+expect dbg_ty == 4 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 7 w1
+screenshot /tmp/s/lv07.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 8 w1
+run 300
+expect dbg_tx == 5 w1
+expect dbg_ty == 60 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 8 w1
+screenshot /tmp/s/lv08.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 9 w1
+run 300
+expect dbg_tx == 30 w1
+expect dbg_ty == 62 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 9 w1
+screenshot /tmp/s/lv09.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 10 w1
+run 300
+expect dbg_tx == 28 w1
+expect dbg_ty == 34 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 0 w1
+expect dbg_floor == 10 w1
+screenshot /tmp/s/lv10.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 11 w1
+run 300
+expect dbg_tx == 30 w1
+expect dbg_ty == 28 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 1 w1
+screenshot /tmp/s/lv11.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 12 w1
+run 300
+expect dbg_tx == 31 w1
+expect dbg_ty == 16 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 2 w1
+screenshot /tmp/s/lv12.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 13 w1
+run 300
+expect dbg_tx == 32 w1
+expect dbg_ty == 44 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 3 w1
+screenshot /tmp/s/lv13.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 14 w1
+run 300
+expect dbg_tx == 2 w1
+expect dbg_ty == 29 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 4 w1
+screenshot /tmp/s/lv14.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 15 w1
+run 300
+expect dbg_tx == 5 w1
+expect dbg_ty == 29 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 5 w1
+screenshot /tmp/s/lv15.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 16 w1
+run 300
+expect dbg_tx == 3 w1
+expect dbg_ty == 5 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 6 w1
+screenshot /tmp/s/lv16.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 17 w1
+run 300
+expect dbg_tx == 4 w1
+expect dbg_ty == 4 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 7 w1
+screenshot /tmp/s/lv17.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 18 w1
+run 300
+expect dbg_tx == 1 w1
+expect dbg_ty == 2 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 8 w1
+screenshot /tmp/s/lv18.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 19 w1
+run 300
+expect dbg_tx == 31 w1
+expect dbg_ty == 61 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 9 w1
+screenshot /tmp/s/lv19.ppm
+# restart the game in that level: dbg_map n = level n (1 based)
+poke dbg_map 20 w1
+run 300
+expect dbg_tx == 29 w1
+expect dbg_ty == 60 w1
+expect dbg_hp == 100 w2
+expect dbg_ep == 1 w1
+expect dbg_floor == 10 w1
+screenshot /tmp/s/lv20.ppm
